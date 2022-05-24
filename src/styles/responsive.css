@@ -1,0 +1,100 @@
+@media screen and (max-width: 800px) {
+    #drawer {
+        width: 200px;
+        /* height: 100%; */
+        position: absolute;
+        /* menyembunyikan #drawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+        transform: translate(-950px, 0);
+        transition: transform 0.3s ease-in-out;
+        background-color:#282d35;
+        left: 0;
+        top: 60px;
+    }
+
+    #drawer.open {
+        transform: translate(0,0)
+    }
+
+    #drawer ul .nav__list {
+        list-style-type: none;
+    }
+        
+    #drawer li {
+        padding: 12px 12px;
+        display: block;
+        background-color: #282d35;
+        text-align: center;
+    }
+        
+    #drawer a {
+        text-decoration: none;
+        font-size: 22px;
+        color: white;
+        padding: 10px;
+    }
+        
+    #hamburger {
+        font-size: 28px;
+        text-decoration: none;
+        color: rgb(230, 201, 148);
+        padding: 12px;
+        
+    }
+
+    .hero-elemen .hero-header-text {
+        font-size: medium;
+        top: 20%;
+        background-color: rgba(166, 166, 118, 0.2);
+        height:100px;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .restaurants {
+        grid-template-columns: 0.85fr;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #drawer {
+      position: relative;
+      transform: translate(0, 0);
+    }
+    
+    #hamburger {
+      display: none;
+    }
+
+    .restaurants {
+        padding: 25px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-elemen .hero-header-text {
+        font-size: x-large;
+        top: 40%;
+        background-color: rgba(166, 166, 118, 0.2);
+        height:150px;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .restaurants {
+        padding: 25px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .restaurants {
+        padding: 25px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+  
